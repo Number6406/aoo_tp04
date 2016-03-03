@@ -20,7 +20,7 @@ public class MaximumSort extends Tri {
 		int max;
 		max = 0;
 		
-		for (int i = 0; i < taille; i++) {
+		for (int i = 0; i <= taille; i++) {
 			if(c.compare(t[i],t[max])>0)max = i;
 		}
 		return max;

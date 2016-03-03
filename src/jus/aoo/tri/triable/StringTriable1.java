@@ -4,6 +4,7 @@ import java.util.Comparator;
 class StringTriable1$Comparator implements Comparator<String> {
 	
 	public int compare(String s1, String s2) {
+		
 		if(s1.length()==s2.length()){
 			return String.CASE_INSENSITIVE_ORDER.compare(s1, s2);
 		}

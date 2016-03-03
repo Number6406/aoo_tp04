@@ -11,16 +11,9 @@ public class MaximumSort extends Tri {
 		int max;
 		for (int i = t.length-1; i >=0; i--) {
 			max = rangmax(t,i,c);
-			echange(t,max,i);
+			swap(t,max,i);
 		}
 		return t;
-	}
-	
-	private <T> void echange(T[] t, int indice1, int indice2){
-		T temp;
-		temp = t[indice2];
-		t[indice2]=t[indice1];
-		t[indice1]=temp;
 	}
 	
 	private <T> int rangmax(T[] t, int taille,Comparator<T> c){

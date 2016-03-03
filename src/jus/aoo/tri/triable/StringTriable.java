@@ -7,11 +7,7 @@ import jus.aoo.tri.Triable;
 public class StringTriable implements Triable<String> {
 
 	public String newInstance() {
-<<<<<<< HEAD
 		int val = (int)(Math.random() * 100000);
-=======
-		int val = (int) (Math.random() * 100000);
->>>>>>> f7c89cc504f5c6cd67ae9ee0881eb1f5fc269f00
 		return Integer.toString(val);
 	}
 

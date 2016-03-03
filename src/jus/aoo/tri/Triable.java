@@ -1,20 +1,20 @@
 package jus.aoo.tri;
 import java.util.Comparator ;
 
-public interface Triable {
+public interface Triable<T> {
   /** générateur aléatoire d'un élément du type
    * @return une valeur d'un type
    */
-  public Object newInstance();
+  public T newInstance();
   /** restitue l'opérateur de comparaison du Triable
    * @return un comparator
    */
-  public Comparator comparator();
+  public Comparator<T> comparator();
   /** restitue la représentation textuelle de la
    * valeur servant dans la relation d'ordre.
    * @return une chaine
    */
-  public String toString(Object o);
+  public String toString(T t);
 	/** restitue le nombre d'appels au comparator
 	 */
 	public long count();

@@ -8,7 +8,7 @@ public class StringTriable implements Triable<String> {
 
 	@Override
 	public String newInstance() {
-		int val = (int) Math.random() * 100000;
+		int val = (int)(Math.random() * 100000);
 		return Integer.toString(val);
 	}
 

@@ -6,28 +6,27 @@ import jus.aoo.tri.Triable;
 
 public class StringTriable implements Triable<String> {
 
-	@Override
 	public String newInstance() {
+<<<<<<< HEAD
 		int val = (int)(Math.random() * 100000);
+=======
+		int val = (int) (Math.random() * 100000);
+>>>>>>> f7c89cc504f5c6cd67ae9ee0881eb1f5fc269f00
 		return Integer.toString(val);
 	}
 
-	@Override
 	public Comparator<String> comparator() {
 		return String.CASE_INSENSITIVE_ORDER;
 	}
 
-	@Override
 	public String toString(String t) {
 		return t;
 	}
 
-	@Override
 	public long count() {
 		return 0;
 	}
 
-	@Override
 	public void resetCount() {};
 
 }

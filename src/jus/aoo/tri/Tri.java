@@ -26,16 +26,16 @@ public abstract class Tri {
      * @param t le tableau à trier
      * @return le tableau trié
      */
-    public Object[] trier(Object[] t,Comparator c){
+    public <T> T[] trier(T[] t,Comparator<T> c){
     	count=0;
-    	Object[] tab = t.clone();        
+    	T[] tab = t.clone();        
     	time=System.nanoTime();
-    	Object[] res = sort(tab,c);
+    	T[] res = sort(tab,c);
     	time=System.nanoTime()-time;
     	return res;        
     }
     /** version assurant le tri selon un algorithme particulier **/
-    protected abstract Object[] sort(Object[] t,Comparator c) ;
+    protected abstract <T> T[] sort(T[] t,Comparator<T> c) ;
     /*-----------------------------------------------------------------------------
  	  la suite de méthodes sont utiles pour faire la mise en œuvre de l’algorithme
  	  et assurer le décompte des affectations
@@ -67,7 +67,7 @@ public abstract class Tri {
      * @param destPos la position dans la destination
      * @param length le nombre d'éléments à copier
      */
-    protected void copy(Object[] src,int srcPos,Object[] dest,int destPos,int length){
+    protected <T> void copy(T[] src,int srcPos,T[] dest,int destPos,int length){
     	System.arraycopy(src,srcPos,dest,destPos,length);
     	count+=length;
     }
@@ -76,7 +76,7 @@ public abstract class Tri {
      * @param c le comparator de la relation d’ordre
      * @return t.length si le tableau est ordonné ou l’indice de violation de l’ordre. 
      */
-    protected static int verifier(Object[] t,Comparator c){
+    protected static <T> int verifier(T[] t,Comparator<T> c){
     	for(int i=1 ;i<t.length ;i++) if(c.compare(t[i],t[i-1])<0) return i ;
     	return t.length;
     } 
